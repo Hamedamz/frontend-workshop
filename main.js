@@ -59,4 +59,40 @@ function findById(id) {
   return allNotes.find((item) => (item.id === id));
 }
 
-console.log(document.getElementById('hamed'))
+function renderAllNotes() {
+  const parent = document.getElementById('notes');
+
+  parent.innerHTML = '';
+
+  for (let i = 0; i < allNotes.length; i += 1) {
+    parent.append(renderNote(allNotes[i]));
+  }
+}
+
+function renderNote(note) {
+  const noteElement = document.createElement('div');
+
+  const innerHTML = `<h2>${note.title}</h2>
+                        <p>${note.text}</p>`;
+
+  noteElement.innerHTML = innerHTML;
+
+  return noteElement;
+}
+
+renderAllNotes();
+
+const noteForm = document.getElementById('noteForm');
+
+noteForm.addEventListener('submit', handleSubmit);
+
+function handleSubmit(e) {
+  e.preventDefault();
+
+  const title = document.getElementById('noteTitle').value;
+  const text = document.getElementById('noteText').value;
+
+  creatNote(title, text);
+
+  renderAllNotes();
+}
