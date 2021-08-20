@@ -2,15 +2,23 @@
 <html lang="end">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Front-end</title>
 
     <script async defer src="./main.js"></script>
+    <script async defer src="./sidebar.js"></script>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
 <header class="header">
+    <button id="menuBtn" class="btn btn--icon">
+        <i class="bi-list"></i>
+    </button>
+
     <h1>
         My Notes
     </h1>
@@ -20,13 +28,22 @@
     <aside class="sidebar">
         <ul class="menu">
             <li class="menu__item">
-                <a class="menu__link menu__link--active" href="#">home</a>
+                <a class="menu__link menu__link--active" href="#">
+                    <i class="bi-house-fill"></i>
+                    home
+                </a>
             </li>
             <li class="menu__item">
-                <a class="menu__link" href="#">pinned</a>
+                <a class="menu__link" href="#">
+                    <i class="bi-pin-fill"></i>
+                    pinned
+                </a>
             </li>
             <li class="menu__item">
-                <a class="menu__link" href="#">help</a>
+                <a class="menu__link" href="#">
+                    <i class="bi-info-circle-fill"></i>
+                    help
+                </a>
             </li>
         </ul>
     </aside>
@@ -54,6 +71,7 @@
         <main id="notes" class="notes">
         </main>
     </div>
+    <script> </script>
 </div>
 </body>
 </html>
