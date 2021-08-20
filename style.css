@@ -201,6 +201,11 @@ body {
     font-size: 20px;
 }
 
+.btn--text {
+    background-color: #ffffff;
+    color: #000000;
+}
+
 .btn:focus {
     background-color: rgba(0, 0, 0, 0.8);
 }
@@ -214,16 +219,20 @@ body {
 }
 
 
-.btn--icon:focus {
+.btn--icon:focus, .btn--text:focus {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-.btn--icon:hover {
+.btn--icon:hover, .btn--text:hover {
     background-color: rgba(0, 0, 0, 0.15);
 }
 
-.btn--icon:active {
+.btn--icon:active, .btn--text:active {
     background-color: rgba(0, 0, 0, 0.2);
+}
+
+.text-right {
+    text-align: right;
 }
 
 @media (min-width: 576px) {
