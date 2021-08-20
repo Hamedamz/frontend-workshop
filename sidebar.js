@@ -9,7 +9,7 @@ btn.addEventListener('click', toggleSidebar);
 
 const mediaQuery = matchMedia('(min-width: 768px)');
 
-function checkChanges(e) {
+function handleChanges(e) {
   const isCollapsed = document.body.classList.contains('collapsed-sidebar');
 
   if(e.matches) {
@@ -24,4 +24,7 @@ function checkChanges(e) {
   }
 }
 
-mediaQuery.addEventListener('change', checkChanges)
+mediaQuery.addEventListener('change', handleChanges)
+
+// initial check
+handleChanges(mediaQuery)
