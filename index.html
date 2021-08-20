@@ -10,38 +10,50 @@
 </head>
 
 <body>
-<header>
+<header class="header">
     <h1>
         My Notes
     </h1>
 </header>
 
-<div>
-    <aside>
-        <ul>
-            <li>home</li>
-            <li>pinned</li>
-            <li><a target="_blank" href="/help">help</a></li>
+<div class="wrapper">
+    <aside class="sidebar">
+        <ul class="menu">
+            <li class="menu__item">
+                <a class="menu__link menu__link--active" href="#">home</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" href="#">pinned</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" href="#">help</a>
+            </li>
         </ul>
     </aside>
 
-    <form id="noteForm">
-        <label for="noteTitle">
-            title
-            <input id="noteTitle" name="noteTitle"/>
-        </label>
+    <div class="main">
+        <form id="noteForm" class="note-form">
+            <p>
+                <label class="form__label" for="noteTitle">
+                    title
+                </label>
+                <input class="form__input" id="noteTitle" name="noteTitle"/>
+            </p>
 
-        <label for="noteText">
-            text
-            <input id="noteText" name="noteText"/>
-        </label>
+            <p>
+                <label class="form__label" for="noteText">
+                    text
+                </label>
+                <input class="form__input" id="noteText" name="noteText"/>
+            </p>
 
-        <button type="submit">create</button>
-        <button type="reset">reset</button>
-    </form>
+            <button class="btn" type="submit">create</button>
+            <button class="btn" type="reset">reset</button>
+        </form>
 
-    <main id="notes">
-    </main>
+        <main id="notes" class="notes">
+        </main>
+    </div>
 </div>
 </body>
 </html>
